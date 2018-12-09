@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px; /* The height is 400 pixels */
+        /*width: 100%;*/ /* The width is the width of the web page */
+      }
+      #home-section {
+        background: url(img/large-client.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+      }
+      #home-section .dark-overlay {
+        /* position: absolute; */
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+      }
+
+      #home-section .home-inner {
+        padding-top: 20px;
+      }
+    </style>
+
+    <title>Mila Massage</title>
+  </head>
+  <body>
+    <div class="container m-1">
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+          <div class="container">
+            <span class="navbar-expand-sm"> &nbsp; </span>
+            <button
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mr-auto">
+                <li>
+
+                </li>
+                <li class="nav-item">
+                  <a
+                    id="aboutmelink"
+                    class="nav-link active"
+                    onclick="showAboutme()"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse.show"
+                    >About Me</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    id="serviceslink"
+                    class="nav-link"
+                    onclick="showServices()"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse.show"
+                    >Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    id="contactlink"
+                    class="nav-link"
+                    onclick="showContact()"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse.show"
+                    >Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    id="locationlink"
+                    class="nav-link"
+                    onclick="showLocation()"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse.show"
+                    >Location</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div id="aboutme">
+        <div id="home-section">
+          <div class="dark-overlay">
+            <div class="home-inner container">
+              <h2 class="h2 lead text-light">About Me</h2>
+              <p class="text-light lead">
+                I am a Licensed Massage Therapist (LMT) in the State of Illinois
+                (license #227.015501), with national and Board Certification in
+                Therapeutic Massage and Bodywork (BCTMB). I am also a Certified
+                Lymphatic Drainage/Enhancement Therapist (LET), Reiki Master and
+                Certified Yoga Teacher.
+              </p>
+              <p class="text-light lead">
+                <strong>My goal</strong> is to provide you with high quality
+                Massage Therapy and Bodywork to alleviate your pain and stress
+                levels so you can enjoy your life again. I am conveniently
+                located at a Doctors' office in Berwyn.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="m-3 border-3 rounded col-12 col-md-10 offset-md-1">
+          <img class="img-fluid" src="img/jarmila.jpg" />
+        </div>
+        <div class="m-3 border-3 rounded col-12 col-md-10 offset-md-1">
+          <img
+            class="border-3 rounded img-fluid"
+            src="img/jarmila-at-work.jpg"
+          />
+        </div>
+        <div class="m-3 border-3 rounded col-12 col-md-10 offset-md-1">
+          <img class="border border-3 img-fluid" src="img/certification.jpg" />
+        </div>
+      </div>
+
+      <div id="services" style="display:none">
+        <h2 class="h2">Services</h2>
+        <ul>
+          <li>
+            <b>Manual Lymphatic Drainage (MLD)</b> is a very gentle light
+            massage that helps to direct lymphatic fluid towards the lymph
+            nodes. The lymphatic system is part of your immune system and cleans
+            toxins, proteins, cancer cells, viruses, and dead cells about 20
+            times faster than the body is able to do on it's own. Once a large
+            amount of toxins are eliminated, the body is able to relax more
+            deeply and use it's energy more directly to regenerate the cells.
+            People have been known to lose weight and have increased energy
+            level. It improves the healing process after surgery as well as
+            reduction in edema (swelling) and scarring, MLD also reduces
+            symptoms of fibromyalgia, chronic fatigue syndrome, rheumatoid
+            arthritis and migrains. It is an excellent technique for post
+            liposuction surgery and plastic surgery patients. <br /><span
+              class="btn btn-secondary p-0"
+              >$60 for 30min, $100 for 60min or $150 for 90min.</span
+            >
+          </li>
+          <li>
+            <b>Deep Tissue</b> is designed to remove severe tension. It is a
+            technique used to relieve both muscles and connective tissue below
+            the surface. It helps to improve range of motion and heal injuries
+            below the surface. Deep tissue massage is often recommended for
+            individuals who experience consistent pain, are involved in heavy
+            physical activity, such as athletes, and patients who have sustained
+            physical injury.<br /><br />
+
+            It is also not uncommon for receivers of Deep Tissue Massage to have
+            their pain replaced with a new muscle ache for a day or two. Deep
+            tissue work varies greatly. What one calls deep tissue another will
+            call light. When receiving deep tissue work it is important to
+            communicate what you are feeling.<br /><br />
+
+            If you have pain in certain area of your body and would like a deep
+            tissue massage, and also haven't had a massage for more then 2
+            months I would recommend to book a 90 min session to receive enough
+            focus on the troubled area and also enjoy a full body massage to
+            benefit from your session the most.
+
+            <br /><span class="btn btn-secondary p-0"
+              >$50 for 30min, $90 for 60min or $135 for 90min.</span
+            >
+          </li>
+
+          <li>
+            <b>Swedish Massage</b> uses massage oil or cream and smooth, gliding
+            strokes. It uses firm but gentle pressure to promote relaxation,
+            ease muscle tension and create other health benefits. It is a
+            classic massage that will ease your stress and allow you to slip
+            into a calm state of relaxation. <br /><span
+              class="btn btn-secondary p-0"
+              >$50 for 30min, $75 for 60min or $120 for 90min.</span
+            >
+          </li>
+          <li>
+            <b>Sports Massage</b> uses a variety of massage techniques designed
+            to help your body feel freer and stronger. It is particularly great
+            for those with active lifestyles. <br /><span
+              class="btn btn-secondary p-0"
+              >$50 for 30min, $90 for 60min or $135 for 90min.</span
+            >
+          </li>
+          <li>
+            <b>Hot Stone Massage</b> uses smooth stones which are heated and
+            then lubricated with oil or essential oils. The therapeutic effects
+            of heat are used to relax muscles more deeply. Used as an extension
+            of the therapist’s hands, massage stones induce deep relaxation and
+            provide a unique experience many find to be tremendously calming and
+            centering. <br /><span class="btn btn-secondary p-0"
+              >$90 for 60min or $135 for 90min.</span
+            >
+          </li>
+          <li>
+            <b>Pregnancy Massage</b> focuses on addressing the special needs of
+            expecting women. Side-lying postures are used to prevent putting
+            pressure on the abdomen. Goals of the therapy are the same as
+            regular massage (relaxation, pain relief, increased circulation &
+            mobility, etc.). However, due to the changes undergone during
+            pregnancy, modification are made. To accommodate swollen tender
+            breasts and a growing belly, special pillows, positioning and
+            techniques are utilized to ensure comfort for both the expecting
+            mother and baby. With increasing weight, a changing center of
+            gravity and the many other changes associated with pregnancy,
+            prenatal massage can help provide relief and a sense of well being
+            that is much deserved.<br /><span class="btn btn-secondary p-0"
+              >$80 for 60min.</span
+            >
+          </li>
+          <li>
+            <b>Chair Massage</b> is performed in a specially designed chair with
+            your clothes on. It is excellent for relaxation and more, depending
+            on the technique(s) used by your massage therapist. <br /><span
+              class="btn btn-secondary p-0"
+              >$50 for 30min or $75 for 60min</span
+            >
+          </li>
+          <li>
+            <b>Reiki</b> uses a technique commonly called palm or hands on
+            healing. Through the use of this technique, practitioners transfer
+            universal energy (i.e., reiki) in the form of qi (Japanese: ki)
+            through the palms, which they believe allows for self-healing and a
+            state of equilibrium. <br /><span class="btn btn-secondary p-0"
+              >$50 for 30min or $75 for 60min.</span
+            >
+          </li>
+          <li>
+            <b>Trigger Point Therapy</b> focuses on trigger points which are
+            described as hyperirritable spots in skeletal muscles that are
+            associated with palpable nodules in taut bands of muscle fibers.
+            Trigger point practitioners believe that palpable nodules are small
+            contraction knots[ambiguous] and a common cause of pain. The trigger
+            point model states that unexplained pain frequently radiates from
+            these points of local tenderness to broader areas, sometimes distant
+            from the trigger point itself. Practitioners claim to have
+            identified reliable referred pain patterns, allowing practitioners
+            to associate pain in one location with trigger points elsewhere.<br />
+            <span class="btn btn-secondary p-0">
+              $50 for 30min, $90 for 60min or $135 for 90min.</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="contact" style="display:none">
+        <h2 class="h2">Contact Me</h2>
+        <p class="lead">
+          Please call or text me at 708-- to schedule an appointment.
+        </p>
+        <p>For other needs, you may use this form</p>
+        <div class="border border-rounded p-5">
+          <form>
+          <div class="form-group mb-3">
+            <label for="name" class="">Your Name</label>
+            <input id="name" type="" class="form-control size:45" placeholder="enter name" required="true" />
+          </div>
+          <div class="form-group mb-3">
+            <label for="eorp" class="">Your email or phone number</label>
+            <input id="eorp" type="text" class="form-control size:50" placeholder="email/phone" required="true" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="">Your message:</label><br />
+            <textarea id="message" class="form-control" required="true" rows="10" ></textarea><br />
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" onclick="contactNotReady()" />
+          </div>
+        </div>
+        </form>
+      </div>
+
+      <div id="location" style="display:none">
+        <h2 class="h2">Location and Directions</h2>
+        <p class="lead">
+          I work in an office that I share with a medical clinic. Berwyn
+          Pediatrics, located at:
+        </p>
+        <h5 class="h5 m-3">6545 Cermak Rd.<br />Berwyn , IL 60402</h5>
+
+        <h4 class="h4 mt-5">In Home Massage</h4>
+        <p class="lead mb-5">
+          Don't have time or energy to travel to my office? Enjoy a great
+          quality massage at the comfort of your own home! Pricing for in-home
+          massages are $30/hour added to the cost of the massage in my office.
+          <span class="bg-warning">Mila, or, these? 60 min/$130, 90min/$150, 120min/$200.</span> I bring my
+          own portable massage table.
+        </p>
+
+        <h4 class="h4 mt-5">Map</h4>
+
+        <!-- The div element for the map -->
+        <div class="my=3" id="map">
+          <script>
+            // Initialize and add the map
+            function initMap() {
+              var google_token = 'AIzaSyA0vJYt9k7pp_aEdtD_EPcvKr7HowwRUvU';
+              var mila_location = { lat: 41.850397, lng: -87.788148 }; // The location lat/long
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: mila_location
+              });
+              // The marker, positioned at Jarmila
+              var marker = new google.maps.Marker({
+                position: mila_location,
+                map: map
+              });
+            }
+          </script>
+        </div>
+        <!--
+          Load the API from the specified URL
+          * The async attribute allows the browser to render the page while the API loads
+          * The callback parameter executes the initMap() function
+        -->
+        <script
+          async
+          defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0vJYt9k7pp_aEdtD_EPcvKr7HowwRUvU&callback=initMap"
+        ></script>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-10 offset-md-1">
+              <h4 class="h4 mt-5">Office Interior</h4>
+              <img src="img/office.jpg" class="my-3 img-fluid" />
+              <h4 class="h4 mt-5">Office Exterior</h4>
+              <img src="img/office-exterior.png" class="my-3 img-fluid" />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var menu_state = 'aboutme';
+
+        function clearMenu() {
+          menu_link = menu_state + 'link';
+          document.getElementById(menu_state).style = 'display:none';
+          var classparts = document.getElementById(menu_link).classList;
+          classparts.remove('active');
+          document.getElementById(menu_link).classList = classparts;
+        }
+
+        function setMenu(new_state) {
+          menu_link = new_state + 'link';
+          document.getElementById(new_state).style = 'display';
+          classparts = document.getElementById(menu_link).classList;
+          classparts.add('active');
+          classparts = document.getElementById(
+            menu_link
+          ).classList = classparts;
+          menu_state = new_state;
+        }
+
+        function showServices() {
+          clearMenu();
+          setMenu('services');
+        }
+
+        function showAboutme() {
+          clearMenu();
+          setMenu('aboutme');
+        }
+        function showContact() {
+          clearMenu();
+          setMenu('contact');
+        }
+        function showLocation() {
+          clearMenu();
+          setMenu('location');
+        }
+        function contactNotReady() { alert("This is juts for show now"); }
+      </script>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
